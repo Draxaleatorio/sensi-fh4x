@@ -103,7 +103,7 @@ export function SensitivityPanel() {
   const copyToClipboard = async () => {
     if (!sensitivity) return;
 
-    const text = `Faster SHOP | Sensibilidade Gerada
+    const text = `Wave System #2027 | Sensibilidade Gerada
 
 Celular: ${sensitivity.phoneModel}
 Estilo: ${sensitivity.playStyle}
@@ -118,7 +118,7 @@ Configuracoes:
 - Olhar Livre: ${sensitivity.freeLook}
 - Botao de Tiro: ${sensitivity.fireButton}
 
-Por drax`;
+Wave System #2027`;
 
     try {
       await navigator.clipboard.writeText(text);
@@ -134,10 +134,10 @@ Por drax`;
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center">
-              <Crosshair className="w-5 h-5 text-foreground" />
+              <img src="/wave-art.jpg" alt="Wave Accounts" className="w-full h-full object-cover rounded-xl" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Faster SHOP</h1>
+              <h1 className="text-xl font-bold text-foreground">Wave System #2027</h1>
               <p className="text-xs text-muted-foreground">Painel de Controle</p>
             </div>
           </div>
@@ -160,7 +160,7 @@ Por drax`;
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight text-balance">
             Gere sua Sensibilidade
             <br />
-            <span className="text-muted-foreground">Perfeita</span>
+            <span className="text-primary">Perfeita</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             Digite seu celular, escolha seu estilo de jogo e modo para gerar a
@@ -256,7 +256,7 @@ Por drax`;
             size="lg"
             onClick={generateSensitivity}
             disabled={!phoneModel.trim() || !playStyle || !gameMode || isGenerating}
-            className="h-16 px-12 text-lg font-bold bg-foreground text-background hover:bg-foreground/90 disabled:opacity-50 transition-all duration-300 hover:scale-105 active:scale-95 rounded-2xl"
+            className="h-16 px-12 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50 transition-all duration-300 hover:scale-105 active:scale-95 rounded-2xl"
           >
             {copyStatus === "error" && (
               <p role="alert" className="mb-3 text-sm text-destructive">
@@ -279,10 +279,10 @@ Por drax`;
         </div>
 
         {(sensitivity || isGenerating) && (
-          <div className="bg-card border border-border rounded-2xl p-8 animate-slide-up">
-            <div className="flex items-center justify-between mb-6">
+          <div className="bg-card border border-border rounded-2xl p-4 sm:p-8 animate-slide-up">
+            <div className="flex flex-wrap gap-4 items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-foreground flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
                   <Crosshair className="w-6 h-6 text-background" />
                 </div>
                 <div>
@@ -295,7 +295,7 @@ Por drax`;
                 </div>
               </div>
               {sensitivity && (
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   <Button
                     variant="outline"
                     size="sm"
@@ -400,7 +400,7 @@ Por drax`;
 
       <footer className="border-t border-border mt-16">
         <div className="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-muted-foreground">
-          Faster SHOP · Gerador de Sensibilidade para Free Fire · Por drax
+          Wave System #2027 · Gerador de Sensibilidade para Free Fire
         </div>
       </footer>
 
@@ -448,11 +448,11 @@ function SensitivityBar({
   const percentage = (value / maxValue) * 100;
 
   return (
-    <div className="flex items-center gap-4">
-      <span className="w-32 text-sm text-muted-foreground font-medium">{label}</span>
+    <div className="flex items-center gap-2 sm:gap-4">
+      <span className="w-24 sm:w-32 shrink-0 text-sm text-muted-foreground font-medium">{label}</span>
       <div className="flex-1 h-3 bg-secondary rounded-full overflow-hidden">
         <div
-          className="h-full bg-foreground rounded-full transition-all duration-1000 ease-out"
+          className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${percentage}%` }}
         />
       </div>

@@ -17,7 +17,7 @@ export async function notifyLogin() {
       redirect: "error",
       signal: AbortSignal.timeout(5000),
       body: JSON.stringify({
-        content: `Novo login na Faster SHOP em <t:${Math.floor(Date.now() / 1000)}:F>.`,
+        content: `Novo login na Wave System #2027 em <t:${Math.floor(Date.now() / 1000)}:F>.`,
         allowed_mentions: { parse: [] },
       }),
     });

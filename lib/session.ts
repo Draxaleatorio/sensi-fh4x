@@ -1,7 +1,7 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
-const sessionCookie = "faster_shop_session";
+const sessionCookie = "wave_system_session";
 const sessionDuration = 8 * 60 * 60;
 
 export function matchesSecret(value: string, expected: string) {
